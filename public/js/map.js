@@ -10709,15 +10709,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 console.log("cc");
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function ($) {
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   function country() {
-    $(".country").click(function () {
-      var name = $(this).attr("data-name");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".country").click(function () {
+      var name = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("data-name");
       console.log(name);
+      updateUrl(name);
     });
   }
 
   country();
+
+  function updateUrl(newPage) {
+    if (history.pushState) {
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + newPage;
+      window.history.pushState({
+        path: newurl
+      }, '', newurl);
+    }
+  }
 });
 
 /***/ }),
