@@ -8,3 +8,7 @@ div#map svg path.country:hover {
   transition-duration: 0.3s;
 }
 
+h1.inactive {
+  display: none;
+}
+

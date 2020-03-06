@@ -10,8 +10,13 @@ use Illuminate\Http\Request;
 
 class CountriesController extends Controller
 {
+	public function index(){
+		return view('welcome');
+
+	}
     public function countries($name){
-    	
+
+
     	$curl = curl_init();
 
 		curl_setopt_array($curl, array(
@@ -34,8 +39,15 @@ class CountriesController extends Controller
 		if ($err) {
 		  echo "cURL Error #:" . $err;
 		} else {
-		  echo $response;
+
+		  //echo $response;
 		}
+
+		$country = json_decode($response);
+		$country_name = $country[0]->name;
+		$country_pop = $country[0]->population;
+		
+		return view('welcome', compact('country_name', 'country_pop'));
 
     }
 

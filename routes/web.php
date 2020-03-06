@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'CountriesController@index');
 
 Route::get('/{name}', 'CountriesController@countries');
