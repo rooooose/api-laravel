@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Country App</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -1825,8 +1825,13 @@ THE SOFTWARE.
       @isset($country_name)
         <p>{{ $country_name }}</p>
         <p>{{ $country_pop }}</p>
+        <p>{{ $country_capital }}</p>
+        <p>{{ $country_language }}</p>
       @endisset
     </div>
+
+    
+
     
     <script type="text/javascript" src="{{asset('js/map.js') }}"></script>
 
