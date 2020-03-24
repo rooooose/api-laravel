@@ -17,12 +17,12 @@
 
     <body>
       
+      <h1>Database Editor</h1>
+
       <form action="{{ route('countries-insert') }}" method="post">
       @csrf
-      <input type="text" name="name" placeholder="Name">
-      <input type="text" name="pop" placeholder="Population">
-      <input type="text" name="capital" placeholder="Capital">
-      <input type="text" name="language" placeholder="Language">
+      <input type="text" name="name" placeholder="Country Name">
+      <input type="text" name="president" placeholder="President Name">
       <button>Add Country</button>
     </form>
 
@@ -34,7 +34,23 @@
 
     <form action="{{ route('countries-update') }}" method="post">
       @csrf
-      <input type="text" name="name" placeholder="Country name">
+
+      <h2>Choose a column to change</h2>
+      <div>
+        <input type="radio" id="country" name="checkbox" value="Country">
+        <label for="country_name">Country</label>
+      </div>
+
+      <div>
+        <input type="radio" id="president" name="checkbox" value="president">
+        <label for="president">President</label>
+      </div>
+
+      <label for="original_name"> Change : </label>
+      <input type="text" name="original_name" id="original_name" placeholder="Name">
+
+      <label for="new_name"> to : </label>
+      <input type="text" name="new_name" id="new_name" placeholder="Name">
       <button>Update line</button>
     </form>
 
@@ -42,16 +58,12 @@
     <div class="countries">
       <div class="country">
         <p>Name</p>
-        <p>Population</p>
-        <p>Capital</p>
-        <p>Main Language</p>
+        <p>President</p>
       </div>
       @foreach($countries as $country)
         <div class="country">
           <p>{{ $country->name }}</p>
-          <p>{{ $country->population }}</p>
-          <p>{{ $country->language}}</p>
-          <p>{{ $country->capital }}</p>
+          <p>{{ $country->president }}</p>
         </div>
       @endforeach
     </div>

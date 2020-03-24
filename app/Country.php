@@ -9,5 +9,5 @@ class Country extends Model
     //
     protected $table = 'country';
 
-    protected $fillable = ['population','name','language','capital'];
+    protected $fillable = ['president','name'];
 }

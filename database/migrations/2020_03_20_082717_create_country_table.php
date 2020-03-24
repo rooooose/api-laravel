@@ -17,9 +17,7 @@ class CreateCountryTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('name');
-            $table->integer('population');
-            $table->string('capital');
-            $table->string('language');
+            $table->string('president');
         });
     }
 
