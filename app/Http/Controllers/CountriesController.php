@@ -48,6 +48,8 @@ class CountriesController extends Controller
 		$country_pop = $country[0]->population;
 		$country_capital = $country[0]->capital;
 		$country_language = $country[0]->languages[0]->name;
+		$country_flag = $country[0]->flag;
+		$country_id = $country[0]->alpha2Code;
 
 		if ($country_name == "British Indian Ocean Territory")
 		{	
@@ -55,9 +57,11 @@ class CountriesController extends Controller
 			$country_pop = $country[1]->population;
 			$country_capital = $country[1]->capital;
 			$country_language = $country[1]->languages[0]->name;
+			$country_flag = $country[1]->flag;
+			$country_id = $country[1]->alpha2Code;
 		}
 
-		return view('welcome', compact('country_name', 'country_pop', 'country_capital', 'country_language'));
+		return view('welcome', compact('country_name', 'country_pop', 'country_capital', 'country_language', 'country_flag', 'country_id'));
 		
 
     }

@@ -1,24 +1,19 @@
 import $ from 'jquery';
-import * as d3 from "d3";
-
-$(document).ready(function() {
-
-	function country() {
-		$(".country").click(function() {
-			
-			
 
 
-		});
 
-	}
-
-	country();
-
-	
-
-	
+let id = $('h2.name').attr("data-id");
+$("path[data-id='"+id+"']").addClass('active');
 
 
-});
 
+
+let pop = $('span.pop').attr("data-pop");
+
+function makeCircle(pop){
+
+    $('span.pop').css("width", Math.log(pop)*10 + "px");
+    $('span.pop').css("height", Math.log(pop)*10 + "px");
+
+}
+makeCircle(pop);

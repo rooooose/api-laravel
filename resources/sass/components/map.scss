@@ -1,5 +1,8 @@
 div#map{
 
+	width:1300px;
+	z-index: 3;
+
 	svg{
 		
 		path.country{
@@ -8,10 +11,13 @@ div#map{
 			transition-duration: .3s;
 
 			&:hover {
-				fill: red;
+				fill: $color-sec;
 				transition-duration: .3s;
+			}
+
+			&.active {
+				fill: $color-sec;
 			}
 		}
 	}
 }
-

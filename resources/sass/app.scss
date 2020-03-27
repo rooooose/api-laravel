@@ -1,7 +1,13 @@
-//
+// Config
+@import "config/reset";
+@import "config/font-face";
+@import "config/variables";
+@import "config/mixins";
+@import "config/global";
 
-body {
-	background: pink;
+// Layouts
+@import "layouts/homepage";
 
-	
-}
+// Components
+@import "components/map";
+@import "components/country_infos";

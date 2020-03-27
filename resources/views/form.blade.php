@@ -37,7 +37,7 @@
 
       <h2>Choose a column to change</h2>
       <div>
-        <input type="radio" id="country" name="checkbox" value="Country">
+        <input type="radio" id="country" name="checkbox" value="country">
         <label for="country_name">Country</label>
       </div>
 

@@ -27,12 +27,16 @@ class databaseController extends Controller
 
     public function update(Request $request){
 
-    	$country = \App\Country::where('name', $request->input('original_name'))->update(['name' => $request->input('new_name')]);
+    	$resultRadio = $request->input('checkbox');
+    	if($resultRadio == 'president'){
+            
+            $country = \App\Country::where('president', $request->input('original_name'))->update(['president' => $request->input('new_name')]);
 
-    	if($('#country').is(':checked')){
-            alert('country');
-        }else{
-            alert('president');
+            
+        }else if($resultRadio == 'country'){
+            
+        		$country = \App\Country::where('name', $request->input('original_name'))->update(['name' => $request->input('new_name')]);
+
         }
 
     	$countries = \App\Country::all();

@@ -1,4 +1,262 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
 body {
-  background: pink;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*@font-face {
+  font-family: 'Din Pro';
+  src: url("../fonts/DINPro-Regular.woff") format("woff");
+  font-weight: normal;
+}*/
+
+span.underline {
+  display: block;
+  background-color: #A30A6E;
+  width: 500px;
+  height: 1.5px;
+}
+
+body {
+  background-color: #303030;
+  font-family: "Raleway Light", sans-serif;
+  display: flex;
+  overflow: hidden;
+  color: white;
+  height: 100vh;
+  width: 100%;
+}
+
+div#map {
+  width: 1300px;
+  z-index: 3;
+}
+
+div#map svg path.country {
+  fill: #7B7B7B;
+  transition-duration: 0.3s;
+}
+
+div#map svg path.country:hover {
+  fill: #A30A6E;
+  transition-duration: 0.3s;
+}
+
+div#map svg path.country.active {
+  fill: #A30A6E;
+}
+
+div.infos {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+div.infos div.title h1 {
+  font-size: 70px;
+  font-family: "Raleway ExtraLight", sans-serif;
+  margin-bottom: 30px;
+  line-height: 80px;
+}
+
+div.infos div.title h1 span {
+  font-family: "Raleway ExtraBold", sans-serif;
+}
+
+div.infos span.pop {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #A30A6E;
+}
+
+div.infos div.country_title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+div.infos div.country_title img.flag {
+  height: 100px;
+}
+
+div.infos div.country_title div {
+  margin-left: 30px;
+}
+
+div.infos div.country_title div h2 {
+  font-family: "Raleway Medium", sans-serif;
+  font-size: 35px;
+  width: 400px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+div.infos div.capital_container,
+div.infos div.language_container,
+div.infos div.pop_container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+div.infos div.capital_container p:first-of-type,
+div.infos div.language_container p:first-of-type,
+div.infos div.pop_container p:first-of-type {
+  font-family: "Raleway SemiBold", sans-serif;
+}
+
+div.infos div.capital_container p.space,
+div.infos div.language_container p.space,
+div.infos div.pop_container p.space {
+  margin-left: 4px;
+}
+
+div.infos div.pop_container {
+  align-items: center;
+}
+
+div.infos div.pop_container span.pop {
+  margin-left: 20px;
+  font-family: "Raleway SemiBold", sans-serif;
 }
 
