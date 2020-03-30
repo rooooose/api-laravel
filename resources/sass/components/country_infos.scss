@@ -55,15 +55,12 @@ div.infos{
 				h2{
 					font-family: $font-medium;
 					font-size: 35px;
-					width:400px;
+					width:340px;
 					line-height: 40px;
 					margin-bottom: 20px;
 				}
 
 		}
-
-			
-
 		
 
 	}
@@ -93,6 +90,17 @@ div.infos{
 		span.pop{
 			margin-left: 20px;
 			font-family: $font-semi-bold;
+		}
+	}
+
+	a{
+		color: white;
+		text-decoration: none;
+		margin-top: 100px;
+
+		span{
+			background-color: $color-button;
+			padding: 10px;
 		}
 	}
 

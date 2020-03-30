@@ -145,21 +145,87 @@ table {
   font-weight: normal;
 }*/
 
-span.underline {
+body {
+  background-color: #303030;
+  font-family: "Raleway Light", sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+body span.underline {
   display: block;
   background-color: #A30A6E;
   width: 500px;
   height: 1.5px;
 }
 
-body {
-  background-color: #303030;
-  font-family: "Raleway Light", sans-serif;
+body.main {
   display: flex;
-  overflow: hidden;
-  color: white;
-  height: 100vh;
-  width: 100%;
+}
+
+body.form div.wrap {
+  padding: 20px 80px;
+}
+
+body.form div.wrap svg {
+  width: 40px;
+}
+
+body.form div.wrap svg path {
+  fill: #FFF;
+}
+
+body.form div.wrap h1 {
+  font-size: 40px;
+  font-family: "Raleway ExtraLight", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+body.form div.wrap form {
+  margin-top: 50px;
+}
+
+body.form div.wrap form:nth-of-type(3) {
+  margin-bottom: 50px;
+}
+
+body.form div.wrap form h3 {
+  font-family: "Raleway SemiBold", sans-serif;
+  margin-bottom: 10px;
+}
+
+body.form div.wrap form div.radio:last-of-type {
+  margin-bottom: 20px;
+}
+
+body.form div.wrap form input {
+  font-family: "Raleway Light", sans-serif;
+}
+
+body.form div.wrap form button {
+  font-family: "Raleway Medium", sans-serif;
+}
+
+body.form div.wrap h2 {
+  font-family: "Raleway ExtraBold", sans-serif;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+body.form div.wrap div.country {
+  display: flex;
+}
+
+body.form div.wrap div.country:first-of-type {
+  font-family: "Raleway SemiBold", sans-serif;
+  margin-bottom: 10px;
+}
+
+body.form div.wrap div.country p {
+  margin-right: 40px;
+  width: 150px;
+  margin-bottom: 5px;
 }
 
 div#map {
@@ -227,7 +293,7 @@ div.infos div.country_title div {
 div.infos div.country_title div h2 {
   font-family: "Raleway Medium", sans-serif;
   font-size: 35px;
-  width: 400px;
+  width: 340px;
   line-height: 40px;
   margin-bottom: 20px;
 }
@@ -258,5 +324,16 @@ div.infos div.pop_container {
 div.infos div.pop_container span.pop {
   margin-left: 20px;
   font-family: "Raleway SemiBold", sans-serif;
+}
+
+div.infos a {
+  color: white;
+  text-decoration: none;
+  margin-top: 100px;
+}
+
+div.infos a span {
+  background-color: #707070;
+  padding: 10px;
 }
 
