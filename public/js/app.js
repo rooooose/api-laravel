@@ -29888,12 +29888,43 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./map */ "./resources/js/map.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./map */ "./resources/js/map.js");
+
+
+var App =
+/*#__PURE__*/
+function () {
+  function App() {
+    _classCallCheck(this, App);
+
+    this.initApp();
+  }
+
+  _createClass(App, [{
+    key: "initApp",
+    value: function initApp() {
+      // Start application
+      new _map__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    }
+  }]);
+
+  return App;
+}();
+
+new App();
 
 /***/ }),
 
@@ -29933,24 +29964,60 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!*****************************!*\
   !*** ./resources/js/map.js ***!
   \*****************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Map_countries; });
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()('h2.name').attr("data-id");
-jquery__WEBPACK_IMPORTED_MODULE_0___default()("path[data-id='" + id + "']").addClass('active');
-var pop = jquery__WEBPACK_IMPORTED_MODULE_0___default()('span.pop').attr("data-pop");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function makeCircle(pop) {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('span.pop').css("width", Math.log(pop) * 10 + "px");
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('span.pop').css("height", Math.log(pop) * 10 + "px");
-}
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-makeCircle(pop);
+ //let pop = $('span.pop').attr("data-pop");
+
+var Map_countries =
+/*#__PURE__*/
+function () {
+  function Map_countries() {
+    _classCallCheck(this, Map_countries);
+
+    this.initEls();
+    this.initEvents();
+  }
+
+  _createClass(Map_countries, [{
+    key: "initEls",
+    value: function initEls() {
+      var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()('h2.name').attr("data-id");
+      this.$els = {
+        country: jquery__WEBPACK_IMPORTED_MODULE_0___default()("path[data-id='" + id + "']"),
+        pop: jquery__WEBPACK_IMPORTED_MODULE_0___default()('span.pop')
+      };
+    }
+  }, {
+    key: "initEvents",
+    value: function initEvents() {
+      this.$els.country.addClass('active');
+      this.makeCircle();
+    }
+  }, {
+    key: "makeCircle",
+    value: function makeCircle() {
+      var pop_num = this.$els.pop.attr("data-pop");
+      this.$els.pop.css("width", Math.log(pop_num) * 10 + "px");
+      this.$els.pop.css("height", Math.log(pop_num) * 10 + "px");
+    }
+  }]);
+
+  return Map_countries;
+}();
+
+
 
 /***/ }),
 
